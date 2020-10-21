@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Col, Row,Card, CardBody, Button} from 'shards-react';
+import { Container, Col, Row,Card, CardBody} from 'shards-react';
 
 class FeaturedGames extends Component {
     state = {  }
