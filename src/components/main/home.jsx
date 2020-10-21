@@ -10,13 +10,13 @@ class Home extends Component {
     state = {  }
     render() { 
         return ( 
-            <React.Fragment>
+            <div>
                 <HomeCarousel/>
                 <GameFilter/>
                 <SearchBox/>
                 <FeaturedGames/>
                 <Footer/>
-            </React.Fragment>
+            </div>
          );
     }
 }

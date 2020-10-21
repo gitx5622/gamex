@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Row, Col } from 'react-bootstrap';
+import { useSelector, useDispatch } from "react-redux";
+import {SignOut} from "../../store/auth/actions/authActions";
 import { Button } from "shards-react";
 import Carousel from 'react-bootstrap/Carousel';
 import slider2 from '../../assets/slider2.jpg';
@@ -8,6 +11,29 @@ import logo from '../../assets/logo.png';
 import '../../App.css'
 
 const HomeCarousel = () => {
+
+    const currentState = useSelector((state) => state);
+
+    const { isAuthenticated } = currentState.Auth;
+
+    const dispatch = useDispatch();
+
+    const logoutUser  = () => dispatch(SignOut());
+
+    const logout = (e) => {
+        e.preventDefault();
+        logoutUser()
+    };
+
+    const SignedInLinks = (
+        <ul>
+        <li><Button size="sm" className="m-2" squared theme="info"><Link to="/login">Login</Link></Button></li>
+        <li><Button size="sm" squared theme="info"><Link to="/register">Signup</Link></Button></li>
+        </ul>
+    );
+    const SignedOutLinks = (
+        <li><Button size="sm" squared theme="info"><Link to="/logout"><a href onClick={logout} style={{color:"white"}}>LOGOUT</a></Link></Button></li>
+    );
     return ( 
         <Carousel interval={2000} fade={true}>
             <Carousel.Item>
@@ -26,9 +52,8 @@ const HomeCarousel = () => {
                             <li>About</li>
                             <li>Blog</li>
                             <li>Contact</li>
-                            <li><Button size="sm" squared theme="info">Login</Button></li>
-                            <li><Button size="sm" squared theme="info">Signup</Button></li>
-                        </ul>
+                            { isAuthenticated ? SignedOutLinks: SignedInLinks }
+                          </ul>
                     </Col>
                     <Col sm={12}><h1>FIFA 21</h1></Col>
                 </Row>
@@ -56,9 +81,8 @@ const HomeCarousel = () => {
                             <li>About</li>
                             <li>Blog</li>
                             <li>Contact</li>
-                            <li><Button size="sm" squared theme="info">Login</Button></li>
-                            <li><Button size="sm" squared theme="info">Signup</Button></li>
-                        </ul>
+                            { isAuthenticated ? SignedOutLinks: SignedInLinks }
+                            </ul>
                     </Col>
                     <Col sm={12}><h1>NEED FOR SPEED PAYBACK</h1></Col>
                 </Row>

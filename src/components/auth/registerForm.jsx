@@ -1,54 +1,114 @@
-import React from "react";
-import Joi from "joi-browser";
-import Form from "../../common/form";
-import * as userService from '../../services/userService';
+import React, {useState} from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Redirect } from "react-router-dom";
+import { SignUp } from "../../store/auth/actions/authActions";
 
-class RegisterForm extends Form {
-  state = {
-    data: {
-      name: "",
-      email: "",
-      password: "",
-    },
-    errors: {},
+const Register = () => {
+  const currentState = useSelector((state) => state.Auth);
+
+  const [user, setUser] = useState({
+      first_name:'',
+      last_name:'',
+      username:'',
+      email: '',
+      password: '',
+      password_confirmation:''
+  });
+  const dispatch = useDispatch();
+
+  const addUser = (credentials) => dispatch(SignUp(credentials));
+
+  const handleChange = e => {
+      setUser({
+          ...user,
+          [e.target.name]: e.target.value
+      })
+  };
+  const submitUser = (e) => {
+      e.preventDefault();
+      addUser({
+          first_name: user.first_name,
+          last_name: user.last_name,
+          username: user.username,
+          email: user.email,
+          password: user.password,
+          password_confirmation: user.password_confirmation
+      });
   };
 
-  schema = {
-    name: Joi.string().min(5).required().label("Name"),
-    email: Joi.string().required().email().label("Email"),
-    password: Joi.string().required().min(5).label("Password"),
-  };
+  if(currentState.isAuthenticated){
+    return <Redirect to='/' />
+  }
 
-  doSubmit = async() => {
-    //Call the server
-    try {
-      await userService.registerUser(this.state.data)
-    }catch(ex) {
-      if (ex.response && ex.response.status === 404) {
-        const errors = {...this.state.errors};
-        errors.email = ex.response.data;
-        this.setState({ errors});
-      }
-    }
-  };
-
-  render() {
     return (
       <div>
         <div className="col-md-4 offset-md-4">
           <center>
             <h1>Register</h1>
           </center>
-          <form onSubmit={this.handleSubmit}>
-            {this.renderInput("name", "Name")}
-            {this.renderInput("email", "Email")}
-            {this.renderInput("password", "Password", "password")}
-            {this.renderButton("Register")}
-          </form>
+          <form onSubmit={submitUser}>
+          <div className="form-group">
+                <label htmlFor="first_name">FirstName</label>
+                <input 
+                type="text" 
+                name="first_name"
+                className="form-control" 
+                id="first_name"
+                onChange={handleChange} 
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="last_name">LastName</label>
+                <input 
+                type="text" 
+                name="last_name"
+                className="form-control" 
+                id="last_name"
+                onChange={handleChange} 
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="username">Username</label>
+                <input 
+                type="text" 
+                name="username"
+                className="form-control" 
+                id="username"
+                onChange={handleChange} 
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input 
+                type="email" 
+                name="email"
+                className="form-control" 
+                id="email"
+                onChange={handleChange} 
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input 
+                type="password" 
+                name="password"
+                onChange={handleChange}
+                className="form-control" 
+                id="password"/>
+              </div>
+              <div className="form-group">
+                <label htmlFor="password_confirmation">Password Confirmation</label>
+                <input 
+                type="password" 
+                name="password_confirmation"
+                onChange={handleChange}
+                className="form-control" 
+                id="password_confirmation"/>
+              </div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
         </div>
       </div>
     );
-  }
 }
-
-export default RegisterForm;
+export default Register;

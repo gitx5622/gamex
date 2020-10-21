@@ -1,52 +1,67 @@
-import React from "react";
-import Joi from "joi-browser";
-import Form from "../../common/input";
+import React, {useState} from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Redirect } from "react-router-dom";
+import { SignIn } from "../../store/auth/actions/authActions";
 
+const LoginForm = () => {
+  const currentState = useSelector((state) => state.Auth);
 
-class LoginForm extends Form {
-  state = {
-    data: {
-      username: "",
-      password: "",
-    },
-    errors: {},
+  const [user, setUser] = useState({
+    username: "",
+    password: "",
+  });
+  const dispatch = useDispatch();
+
+  const userLogin = (credentials) => dispatch(SignIn(credentials));
+
+  const handleChange = (e) => {
+    setUser({
+      ...user,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const submitUser = (e) => {
+    e.preventDefault();
+    userLogin({
+      username: user.username,
+      password: user.password,
+    });
   };
 
-  schema = {
-    username: Joi.string().required().min(5).label("Username"),
-    password: Joi.string().required().min(5).label("Password"),
-  };
-
-  doSubmit = async() => {
-       //Call the server
-       try {
-        const {data} = await authService.loginUser(this.state.data);
-        console.log(data);
-      }catch(ex) {
-        if (ex.response && ex.response.status === 404) {
-          const errors = {...this.state.errors};
-          errors.username = ex.response.data;
-          this.setState({ errors});
-        }
-      }
-  };
-
-  render() {
+  if (currentState.isAuthenticated) {
+    return <Redirect to="/" />;
+  }
     return (
       <div>
         <div className="col-md-4 offset-md-4">
           <center>
             <h1>Login</h1>
           </center>
-          <form onSubmit={this.handleSubmit}>
-            {this.renderInput("username", "Username")}
-            {this.renderInput("password", "Password", "password")}
-            {this.renderButton("Login")}
-          </form>
+          <form onSubmit={submitUser}>
+              <div className="form-group">
+                <label htmlFor="username">Username</label>
+                <input 
+                type="text" 
+                name="username"
+                className="form-control" 
+                id="username"
+                onChange={handleChange} 
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input 
+                type="password" 
+                name="password"
+                onChange={handleChange}
+                className="form-control" 
+                id="password"/>
+              </div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
         </div>
       </div>
     );
-  }
 }
 
 export default LoginForm;
