@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Col, Row} from 'shards-react';
-import '../../App.css';
 
 const Footer = () => {
     return ( 
@@ -47,7 +46,7 @@ const Footer = () => {
                     <Col>
                     <ul>
                     <li>Gamex</li>
-                    <li>Copyright © 2018 Cloux - All rights reserved.</li>
+                    <li>Copyright © 2020 Gamex - All rights reserved.</li>
                     </ul>
                     </Col>
                     <Col>

@@ -41,7 +41,7 @@ const Register = () => {
   }
 
     return (
-      <div>
+      <div className="auth-form">
         <div className="col-md-4 offset-md-4">
           <center>
             <h1>Register</h1>

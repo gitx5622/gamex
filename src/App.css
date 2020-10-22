@@ -1,3 +1,12 @@
+.gameplay {
+  color: white;
+  font-family: 'Titillium Web';
+  font-size: 3.154rem;
+  line-height: 3.154rem;
+  font-weight: 800;
+  margin-bottom: 2.308rem;
+  text-transform: uppercase;
+}
 .image-content {
   z-index: 100px;
   margin-top: -480px;
@@ -18,10 +27,16 @@
 .navbar li {
   display: inline;
 }
+
+.auth-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
 .searchbox {
-  background-image: url("./assets/search.jpg");
   -webkit-background-size:cover;
   -moz-background-size:cover;
+  background-color: #CAEDF2;
   -o-background-size:cover;
   background-size:cover;
   background-position: 0 0;
@@ -47,4 +62,62 @@
 .bottom-footer li {
   display: inline;
   padding: 5px;
+}
+
+.form-group input {
+  border-radius: unset;
+  height: 50px;
+}
+.btn-solid {
+  padding: 13px 29px;
+  border-radius: unset;
+  letter-spacing: 0.05em;
+  background-image: -webkit-linear-gradient(30deg,cyan 50%,transparent 50%);
+  background-size: 540px;
+  background-repeat: no-repeat;
+  background-position: 0;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.btn-solid:hover {
+  background-position: 100%;
+  color: #000000;
+  background-color: cornflowerblue;
+  border-radius: unset;
+}
+
+.auth-form {
+  background-image: url('./assets/slider1.jpg');
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position: 0 0;
+}
+.newly-released {
+  z-index: -1;
+  margin-top: -200px;
+}
+.newly-released h1, p {
+  color: white;
+  margin-top: -70px;
+  margin-bottom: 70px;
+}
+.newly-released img {
+  width: 100%;
+  max-height: 200px;
+  margin-top: -70px;
+  margin-bottom: 70px ;
+  border-radius: 10px;
+}
+.new-released {
+  width: 100%;
+  max-height: 300px;
+}
+.header-color {
+  color: #71D9EA ;
+}
+.blog {
+  background-color: whitesmoke;
 }

@@ -19,10 +19,13 @@ export const SignIn = (credentials) => {
         try {
             const res = await axios.post(`${API_ROUTE}/login`, credentials);
             let userData = res.data;
+            const expirationDate = new Date(new Date().getTime() + 3600);
             localStorage.setItem("token", userData.token);
             localStorage.setItem('user_data', JSON.stringify(userData));
+            localStorage.setItem("expirationDate", expirationDate);
             setAuthorizationToken(userData.token);
             dispatch({type: LOGIN_SUCCESS, payload: userData});
+            dispatch(checkAuthTimeout(3600));
             // message.success('You have successfully logged in.')
         }catch (err) {
             dispatch({type:LOGIN_ERROR, payload: err})
@@ -37,6 +40,7 @@ export const SignOut = () => {
         dispatch({ type: LOGOUT_SUCCESS });
         window.localStorage.clear(); //update the localstorage
         localStorage.removeItem("expirationDate");
+        window.location.reload(true);
         history.push('/login');
     }
 };

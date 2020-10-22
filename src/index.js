@@ -11,6 +11,7 @@ import setAuthorizationToken from "./utils/authorization";
 import { LOGIN_SUCCESS } from "./store/auth/actionTypes/index";
 import reducer from "./store/combinedReducer";
 import { BrowserRouter } from "react-router-dom";
+import "./App.css";
 
 const composeEnhances = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(

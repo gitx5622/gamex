@@ -8,7 +8,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import slider2 from '../../assets/slider2.jpg';
 import slider3 from '../../assets/slider3.jpg';
 import logo from '../../assets/logo.png';
-import '../../App.css'
 
 const HomeCarousel = () => {
 
@@ -26,13 +25,13 @@ const HomeCarousel = () => {
     };
 
     const SignedInLinks = (
-        <ul>
-        <li><Button size="sm" className="m-2" squared theme="info"><Link to="/login">Login</Link></Button></li>
-        <li><Button size="sm" squared theme="info"><Link to="/register">Signup</Link></Button></li>
-        </ul>
+        <React.Fragment>
+        <li><Button size="sm" squared theme="info"><Link className="auth-link" to="/login">Login</Link></Button></li>
+        <li><Button size="sm" squared theme="info"><Link className="auth-link" to="/register">Signup</Link></Button></li>
+        </React.Fragment>
     );
     const SignedOutLinks = (
-        <li><Button size="sm" squared theme="info"><Link to="/logout"><a href onClick={logout} style={{color:"white"}}>LOGOUT</a></Link></Button></li>
+        <li><Button size="sm" squared theme="info"><Link to="/logout"><a href="#/" onClick={logout} style={{color:"white"}}>LOGOUT</a></Link></Button></li>
     );
     return ( 
         <Carousel interval={2000} fade={true}>
@@ -56,8 +55,8 @@ const HomeCarousel = () => {
                           </ul>
                     </Col>
                     <Col sm={12}><h1>FIFA 21</h1></Col>
-                </Row>
-                <h1>GAMEPLAY</h1>
+                </Row><br/><br/><br/>
+                <h1 className="gameplay">GAMEPLAY</h1><br/><br/><br/>
                 <p>FIFA 21 rewards you for your creativity and control all over the pitch
                 Create more scoring opportunities with all-new dynamic attacking systems 
                 in the most intelligent FIFA gameplay to date.
@@ -86,7 +85,7 @@ const HomeCarousel = () => {
                     </Col>
                     <Col sm={12}><h1>NEED FOR SPEED PAYBACK</h1></Col>
                 </Row>
-                <h3>Third slide label</h3>
+                <h3 className="gameplay">GAMEPLAY</h3><br/><br/><br/>
                 <p>Need for Speed Payback is a racing video game developed by 
                     Ghost Games and published by Electronic Arts for Microsoft 
                     Windows, PlayStation 4 and Xbox One.

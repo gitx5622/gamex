@@ -32,7 +32,7 @@ const LoginForm = () => {
     return <Redirect to="/" />;
   }
     return (
-      <div>
+      <div className="auth-form">
         <div className="col-md-4 offset-md-4">
           <center>
             <h1>Login</h1>
@@ -57,7 +57,13 @@ const LoginForm = () => {
                 className="form-control" 
                 id="password"/>
               </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <button
+                  type="submit"
+                  className="btn btn-solid"
+                  name="login"
+                >
+                  Login
+                </button>
             </form>
         </div>
       </div>
