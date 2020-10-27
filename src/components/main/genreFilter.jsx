@@ -22,6 +22,7 @@ class GameFilter extends Component {
         return ( 
             <Container className="p-3">
                  <center>
+                <h3>FILTER GAMES</h3>
                  <Button className="m-2" outline squared theme="info">
                  <a href onClick={() => axios.get(`${API_ROUTE}/games?genre_id=0`).then(res => {this.setState({gameGenres: res.data.games})})}>ALL GAMES</a>
                 </Button>

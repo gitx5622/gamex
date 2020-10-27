@@ -19,7 +19,7 @@ class AllGames extends Component {
          return ( 
              <div>
                  <Container className="p-3">
-                 <center>ALL GAMES</center>
+                 <center><h3>ALL GAMES</h3></center>
                  <Row className="game-filter">
                  {games.map(game => { return (
                     <Col key={game.id} sm="12" md="4" lg="3">

@@ -4,7 +4,6 @@ import HomeCarousel from './carousel';
 import Footer from './footer';
 import GameFilter from './genreFilter';
 import Released from './released';
-import SearchBox from './searchBox';
 import AllGames from './allGames';
 
 class Home extends Component {
@@ -15,7 +14,6 @@ class Home extends Component {
                 <HomeCarousel/>
                 <GameFilter/>
                 <AllGames/>
-                <SearchBox/>
                 <Released/>
                 <Blog/>
                 <Footer/>
