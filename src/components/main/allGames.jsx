@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Container, Row, Col,Card, CardBody,CardImg, CardTitle} from 'shards-react';
 import axios from "axios";
 import API_ROUTE from '../../utils/constants';
+import desktop from "../../assets/desktop.png";
 
 class AllGames extends Component {
     state = {
@@ -18,7 +19,7 @@ class AllGames extends Component {
         const { games} = this.state;
          return ( 
              <div>
-                 <Container className="p-3">
+                 <Container className="p-2">
                  <center><h3>ALL GAMES</h3></center>
                  <Row className="game-filter">
                  {games.map(game => { return (
@@ -27,7 +28,7 @@ class AllGames extends Component {
                         <CardImg top src={game.image_url} className="card-image"/>
                             <CardBody>
                             <CardTitle>{game.title}</CardTitle>
-                            {game.genres.map(genre => <li key={genre.id}>{genre.name}</li>)}
+                            {game.genres.map(genre => <Col key={genre.id}><img src={desktop} alt="" width="20px" height="20px"/> {genre.name}</Col>)}
                             </CardBody>
                         </Card>
                         <br/>

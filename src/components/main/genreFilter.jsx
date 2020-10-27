@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Container, Row, Col,Card, CardBody, Button,CardImg, CardTitle} from 'shards-react';
 import axios from 'axios';
 import API_ROUTE from '../../utils/constants';
-
+import desktop from "../../assets/desktop.png";
 
 class GameFilter extends Component { 
      state = {
@@ -40,7 +40,7 @@ class GameFilter extends Component {
                         <CardImg top src={game.image_url} className="card-image"/>
                             <CardBody>
                             <CardTitle>{game.title}</CardTitle>
-                            {game.genres.map(genre => <li>{genre.name}</li>)}
+                            {game.genres.map(genre => <Col sm="12"><img src={desktop} alt="" width="20px" height="20px"/> {genre.name}</Col>)}
                             </CardBody>
                         </Card>
                         <br/>

@@ -9,7 +9,7 @@ const Blog = () => {
                  <h2>BLOG AND<strong className="header-color"> &nbsp;NEWS</strong></h2>
                 </center>
                 <Row className="featured-games">
-                <Col>
+                <Col sm="4" xs="12">
                 <Card className="card-image">
                 <CardImg top src="https://demo.gloriathemes.com/wp/cloux/wp-content/uploads/2017/12/video-post-560x370.jpg" className="card-image" />
                     <CardBody>
@@ -19,8 +19,9 @@ const Blog = () => {
                        
                     </CardBody>
                 </Card>
+                <br/>
                 </Col>
-                <Col>
+                <Col sm="4" xs="12">
                 <Card className="card-image">
                 <CardImg top src="https://demo.gloriathemes.com/wp/cloux/wp-content/uploads/2017/12/post-1-560x370.jpg" className="card-image" />
                     <CardBody>
@@ -30,8 +31,9 @@ const Blog = () => {
                          
                     </CardBody>
                 </Card>
+                <br/>
                 </Col>
-                <Col> 
+                <Col sm="4" xs="12"> 
                 <Card className="card-image">
                 <CardImg top src="https://demo.gloriathemes.com/wp/cloux/wp-content/uploads/2017/12/gallery-3-560x370.jpg" className="card-image" />
                     <CardBody>
