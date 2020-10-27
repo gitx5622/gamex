@@ -31,7 +31,7 @@ class AllGames extends Component {
                             </CardBody>
                         </Card>
                     </Col>
-                )})}
+                )})}<br/>
                 </Row>
                 </Container>
              </div>
