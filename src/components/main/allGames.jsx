@@ -30,8 +30,8 @@ class AllGames extends Component {
                             {game.genres.map(genre => <li key={genre.id}>{genre.name}</li>)}
                             </CardBody>
                         </Card>
+                        <br/>
                     </Col>
-                    <br/>
                 )})}
                 </Row>
                 </Container>

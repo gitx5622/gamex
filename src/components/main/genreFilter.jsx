@@ -43,8 +43,8 @@ class GameFilter extends Component {
                             {game.genres.map(genre => <li>{genre.name}</li>)}
                             </CardBody>
                         </Card>
+                        <br/>
                     </Col>
-                    <br/>
                 )})}
                 </Row>
             </Container>

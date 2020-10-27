@@ -6,7 +6,7 @@ import newlyreleased from "../../assets/slider2.jpg";
 
 const Released = () => {
     return ( 
-        <div>
+        <div className="d-none d-sm-block">
             <img src={newreleased} alt="new-released" className="new-released"/>
             <Container className="newly-released">
                 <Row>
