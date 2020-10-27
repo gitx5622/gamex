@@ -17,19 +17,6 @@ export const fetchGenres = () => {
     }
 };
 
-export const fetchGenre = (id) => {
-    return async(dispatch) => {
-        dispatch({type: BEFORE_STATE});
-        try {
-            const res = await axios.get(`${API_ROUTE}/genres/${id}`)
-            dispatch({type: FETCH_GENRE_SUCCESS, payload: res.data, status:res.status})
-        }catch(err){
-            dispatch({type: FETCH_GENRE_ERROR, payload: err.error})
-            history.push("/");
-        }
-    }
-};
-
 export const createGenre = (createGenre) => {
     return async(dispatch) => {
         dispatch({type: BEFORE_STATE});
@@ -44,3 +31,16 @@ export const createGenre = (createGenre) => {
     }
 
 }
+
+export const fetchGenre = (id) => {
+    return async(dispatch) => {
+        dispatch({type: BEFORE_STATE});
+        try {
+            const res = await axios.get(`${API_ROUTE}/genres/${id}`)
+            dispatch({type: FETCH_GENRE_SUCCESS, payload: res.data && res.status})
+        }catch(err){
+            dispatch({type: FETCH_GENRE_ERROR, payload: err.error})
+            history.push("/");
+        }
+    }
+};

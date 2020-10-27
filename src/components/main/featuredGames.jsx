@@ -12,32 +12,32 @@ class FeaturedGames extends Component {
                 </center>
                 <Row className="featured-games">
                 <Col>
-                <Card>
-                <CardImg top src="https://demo.gloriathemes.com/wp/cloux/wp-content/uploads/2017/12/soccer-poster-384x488.jpg" />
+                <Card className="card-image">
+                <CardImg top src="https://demo.gloriathemes.com/wp/cloux/wp-content/uploads/2017/12/soccer-poster-384x488.jpg" className="card-image" />
                     <CardBody>
                     <CardTitle>GLORIA SOCCER</CardTitle>
                     </CardBody>
                 </Card>
                 </Col>
                 <Col>
-                <Card>
-                <CardImg top src="https://demo.gloriathemes.com/wp/cloux/wp-content/uploads/2017/12/ew-cover-384x488.jpg" />
+                <Card className="card-image">
+                <CardImg top src="https://demo.gloriathemes.com/wp/cloux/wp-content/uploads/2017/12/ew-cover-384x488.jpg" className="card-image" />
                     <CardBody>
                     <CardTitle>EGYPT AND WORLD</CardTitle>
                     </CardBody>
                 </Card>
                 </Col>
                 <Col>
-                <Card>
-                <CardImg top src="https://demo.gloriathemes.com/wp/cloux/wp-content/uploads/2017/12/cod-cover-384x488.jpg" />
+                <Card className="card-image">
+                <CardImg top src="https://demo.gloriathemes.com/wp/cloux/wp-content/uploads/2017/12/cod-cover-384x488.jpg" className="card-image"/>
                     <CardBody>
                     <CardTitle>EARTH WARS</CardTitle>
                     </CardBody>
                 </Card>
                 </Col>
                 <Col>
-                <Card>
-                <CardImg top src="https://i.redd.it/hzm57ypdhbc51.jpg" />
+                <Card className="card-image">
+                <CardImg top src="https://i.redd.it/hzm57ypdhbc51.jpg" className="card-image"/>
                     <CardBody>
                     <CardTitle>CALL OF DUTY: MODERN WELFARE</CardTitle>
                     </CardBody>

@@ -31,7 +31,7 @@ const HomeCarousel = () => {
         </React.Fragment>
     );
     const SignedOutLinks = (
-        <li><Button size="sm" squared theme="info"><Link to="/logout"><a href="#/" onClick={logout} style={{color:"white"}}>LOGOUT</a></Link></Button></li>
+        <li><Button size="sm" squared theme="info"><Link onClick={logout} to="/logout">LOGOUT</Link></Button></li>
     );
     return ( 
         <Carousel interval={2000} fade={true}>

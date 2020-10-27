@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Blog from './blog';
 import HomeCarousel from './carousel';
-import FeaturedGames from './featuredGames';
 import Footer from './footer';
-import GameFilter from './gameFilter';
+import GameFilter from './genreFilter';
 import Released from './released';
 import SearchBox from './searchBox';
-
+import AllGames from './allGames';
 
 class Home extends Component {
     state = {  }
@@ -15,8 +14,8 @@ class Home extends Component {
             <div>
                 <HomeCarousel/>
                 <GameFilter/>
+                <AllGames/>
                 <SearchBox/>
-                <FeaturedGames/>
                 <Released/>
                 <Blog/>
                 <Footer/>
