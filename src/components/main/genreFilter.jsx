@@ -3,11 +3,11 @@ import {Container, Row, Col,Card, CardBody, Button,CardImg, CardTitle} from 'sha
 import axios from 'axios';
 import API_ROUTE from '../../utils/constants';
 
+
 class GameFilter extends Component { 
      state = {
         genres:[],
-        games:[],
-        gameGenres:[],
+        gameGenres:[]
      }
 
     async componentDidMount() {
