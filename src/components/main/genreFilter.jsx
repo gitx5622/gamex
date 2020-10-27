@@ -44,7 +44,7 @@ class GameFilter extends Component {
                             </CardBody>
                         </Card>
                     </Col>
-                )})}
+                )})}<br/>
                 </Row>
             </Container>
          );
