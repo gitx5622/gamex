@@ -15,7 +15,8 @@ class AllGames extends Component {
         console.log(`active page is ${pageNumber}`);
         this.setState({activePage: pageNumber});
     }
-
+    activePage = this.state.activePage
+    
     async componentWillUpdate() {
         const {data:gamePagination} = await axios.get(`${API_ROUTE}/games?per=4&page=${this.state.activePage}`);
         this.setState({
@@ -55,7 +56,6 @@ class AllGames extends Component {
                 activePage={this.state.activePage}
                 itemsCountPerPage={4}
                 totalItemsCount={5}
-                pageRangeDisplayed={5}
                 onChange={this.handlePageChange}
                 />
                 </Container>

@@ -8,6 +8,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import slider2 from '../../assets/slider2.jpg';
 import slider3 from '../../assets/slider3.jpg';
 import logo from '../../assets/logo.png';
+import SearchBox from './searchBox';
 
 const HomeCarousel = () => {
 
@@ -55,12 +56,13 @@ const HomeCarousel = () => {
                           </ul>
                     </Col>
                     <Col sm={12}><h1>FIFA 21</h1></Col>
-                </Row><br/><br/><br/>
-                <h1 className="gameplay">GAMEPLAY</h1><br/><br/><br/>
+                </Row>
+                <h1 className="gameplay">GAMEPLAY</h1>
                 <p>FIFA 21 rewards you for your creativity and control all over the pitch
                 Create more scoring opportunities with all-new dynamic attacking systems 
                 in the most intelligent FIFA gameplay to date.
                 </p>
+                <SearchBox/>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -83,13 +85,14 @@ const HomeCarousel = () => {
                             { isAuthenticated ? SignedOutLinks: SignedInLinks }
                             </ul>
                     </Col>
-                    <Col sm={12}><h1>NEED FOR SPEED PAYBACK</h1></Col>
+                    <Col sm={12}><h1>NEED FOR SPEED</h1></Col>
                 </Row>
-                <h3 className="gameplay">GAMEPLAY</h3><br/><br/><br/>
+                <h1 className="gameplay">GAMEPLAY</h1>
                 <p>Need for Speed Payback is a racing video game developed by 
                     Ghost Games and published by Electronic Arts for Microsoft 
                     Windows, PlayStation 4 and Xbox One.
                 </p>
+                <SearchBox/>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
