@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { SignUp } from "../../store/auth/actions/authActions";
+import { Link } from "react-router-dom";
+import {Row, Col} from 'shards-react';
 
 const Register = () => {
   const currentState = useSelector((state) => state.Auth);
@@ -105,7 +107,20 @@ const Register = () => {
                 className="form-control" 
                 id="password_confirmation"/>
               </div>
-              <button type="submit" className="btn btn-primary">Submit</button>
+              <Row>
+              <Col>
+              <button
+                  type="submit"
+                  className="btn btn-solid"
+                  name="login"
+                >
+                  Login
+                </button>
+                </Col>
+              <Col>
+                <h6>Already have an account   <Link to="/login">Login</Link></h6>
+              </Col>
+              </Row>
             </form>
         </div>
       </div>

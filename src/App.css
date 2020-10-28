@@ -1,3 +1,6 @@
+p {
+  color: #000000;
+}
 .gameplay {
   color: white;
   font-family: 'Titillium Web';
@@ -88,12 +91,7 @@
 }
 
 .auth-form {
-  background-image: url('./assets/slider1.jpg');
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  background-size:cover;
-  background-position: 0 0;
+  margin-top: 10%;
 }
 .newly-released {
   z-index: -1;

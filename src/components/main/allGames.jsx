@@ -19,7 +19,7 @@ class AllGames extends Component {
         const { games} = this.state;
          return ( 
              <div>
-                 <Container className="p-2">
+                 <Container className="p-3">
                  <center><h3>ALL GAMES</h3></center>
                  <Row className="game-filter">
                  {games.map(game => { return (
