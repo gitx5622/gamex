@@ -72,8 +72,7 @@ const LoginForm = () => {
               <Col>
                 <h6>Dont have an account    <Link to="/register">Register</Link></h6>
               </Col>
-              </Row>
-             
+              </Row>   
             </form>
         </div>
       </div>
