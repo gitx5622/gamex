@@ -8,12 +8,11 @@ import Carousel from 'react-bootstrap/Carousel';
 import slider2 from '../../assets/slider2.jpg';
 import slider3 from '../../assets/slider3.jpg';
 import logo from '../../assets/logo.png';
-import SearchBox from './searchBox';
+import SearchBar from './SearchBar';
 
 const HomeCarousel = () => {
-
     const currentState = useSelector((state) => state);
-
+    
     const { isAuthenticated } = currentState.Auth;
 
     const dispatch = useDispatch();
@@ -24,7 +23,7 @@ const HomeCarousel = () => {
         e.preventDefault();
         logoutUser()
     };
-
+    
     const SignedInLinks = (
         <React.Fragment>
         <li><Button size="sm" squared theme="info"><Link className="auth-link" to="/login">Login</Link></Button></li>
@@ -62,7 +61,9 @@ const HomeCarousel = () => {
                 Create more scoring opportunities with all-new dynamic attacking systems 
                 in the most intelligent FIFA gameplay to date.
                 </p>
-                <SearchBox/>
+                <Row>
+                <SearchBar/>
+                </Row>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -92,7 +93,9 @@ const HomeCarousel = () => {
                     Ghost Games and published by Electronic Arts for Microsoft 
                     Windows, PlayStation 4 and Xbox One.
                 </p>
-                <SearchBox/>
+                <Row>
+                <SearchBar/>
+                </Row>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

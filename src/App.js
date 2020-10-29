@@ -4,6 +4,7 @@ import NotFound from "./components/main/notFound";
 import Home from "./components/main/home";
 import LoginForm from "./components/auth/loginForm";
 import RegisterForm from "./components/auth/registerForm";
+import GameDetails from "./components/main/gameDetails";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         {/* <Navbar /> */}
         <div className="content">
           <Switch>
+            <Route path="/game/:id" component={GameDetails}/>
             <Route path="/login" component={LoginForm}/>
             <Route path="/register" component={RegisterForm}/>
             <Route path="/" component={Home}/>

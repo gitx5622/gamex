@@ -2,14 +2,14 @@
   color: white;
   font-family: 'Titillium Web';
   font-size: 3.154rem;
-  line-height: 3.154rem;
+  line-height: 0.150rem;
   font-weight: 800;
   margin-bottom: 2.308rem;
   text-transform: uppercase;
 }
 .image-content {
   z-index: 100px;
-  margin-top: 00px;
+  margin-top: 0px;
   text-align: unset;
 }
 .image-content h1 {
@@ -63,7 +63,7 @@
   padding: 13px 29px;
   border-radius: unset;
   letter-spacing: 0.05em;
-  background-image: -webkit-linear-gradient(30deg,cyan 50%,transparent 50%);
+  background-image: -webkit-linear-gradient(30deg,rgb(95, 176, 230) 50%,transparent 50%);
   background-size: 540px;
   background-repeat: no-repeat;
   background-position: 0;
@@ -109,4 +109,27 @@
 }
 .card-image {
   border-radius: unset;
+}
+.results-container {
+  z-index: 1000;
+  margin-top: -20px;
+  background-color: white;
+  overflow-y: auto;
+  max-height: 110px;
+}
+.search-list {
+  display: inline;
+  margin-left: 10px;
+}
+.search-image {
+  display: inline;
+  margin-left: -380px;
+}
+
+.result-items {
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+.game-search {
+  color: white;
 }
