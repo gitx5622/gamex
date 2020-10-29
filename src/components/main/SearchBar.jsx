@@ -60,7 +60,7 @@ class SearchBar extends Component {
 
     if (Object.keys(games).length && games.length) {
       return (
-        <div className="results-container">
+        <div className="results-container col-md-12">
           {filteredCharacters &&
             filteredCharacters.map((game) => {
               return (
