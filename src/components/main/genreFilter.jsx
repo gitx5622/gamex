@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Container, Row, Col,Card, CardBody, Button,CardImg, CardTitle} from 'shards-react';
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import API_ROUTE from '../../utils/constants';
 import desktop from "../../assets/desktop.png";
@@ -7,7 +8,8 @@ import desktop from "../../assets/desktop.png";
 class GameFilter extends Component { 
      state = {
         genres:[],
-        gameGenres:[]
+        gameGenres:[],
+        readMore: false
      }
 
     async componentDidMount() {
@@ -22,19 +24,21 @@ class GameFilter extends Component {
     }
 
       render(){
-          const { genres, gameGenres} = this.state;
+          const { genres, gameGenres, readMore} = this.state;
         return ( 
             <Container className="p-3">
                  <center>
                 <h3>FILTER GAMES</h3>
                  <Button 
+                 className="m-2"
                  outline squared theme="info"
                  onClick={() => axios.get(`${API_ROUTE}/games`).then(res => {this.setState({gameGenres: res.data.games})})}>
                  ALL GAMES
                 </Button>
                 {genres.map(genre => {return (
                     <Button 
-                    key={genre.id} 
+                    key={genre.id}
+                    className="m-2"
                     outline squared theme="info"
                     onClick={() => axios.get(`${API_ROUTE}/games?genre_id=${genre.id}`).then(res => {this.setState({gameGenres: res.data.games})})}>
                     {genre.name}
@@ -49,7 +53,11 @@ class GameFilter extends Component {
                         <CardImg top src={game.image_url} className="card-image"/>
                             <CardBody>
                             <CardTitle>{game.title}</CardTitle>
-                            {game.genres.map(genre => <Col sm="12"><img src={desktop} alt="" width="20px" height="20px"/> {genre.name}</Col>)}
+                            {game.genres.map(genre => <Col sm="12"><img className="genre-image" src={desktop} alt="" width="20px" height="20px"/> {genre.name}</Col>)}
+                            {readMore ? game.description : game.description.substring(0, 50)}
+                            <Link onClick={()=> this.setState({readMore: !readMore})}>
+                                {readMore ? '...Show Less' : '...Read More'}
+                            </Link>
                             </CardBody>
                         </Card>
                         <br/>
