@@ -5,9 +5,7 @@ import Footer from "./footer";
 import NavBar from './navbar';
 import pg18 from '../../assets/18.jpg';
 
-const GameDetails = ({params}) => {
-  const gameID = params.match.id
-  console.log(gameID);
+const GameDetails = () => {
     return ( 
         <div>
             <NavBar/>
