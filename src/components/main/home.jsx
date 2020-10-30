@@ -4,7 +4,7 @@ import HomeCarousel from './carousel';
 import Footer from './footer';
 import GameFilter from './genreFilter';
 import Released from './released';
-import AllGames from './allGames';
+import Reviews from './reviews';
 
 class Home extends Component {
     state = {  }
@@ -13,8 +13,8 @@ class Home extends Component {
             <div>
                 <HomeCarousel/>
                 <GameFilter/>
-                <AllGames/>
                 <Released/>
+                <Reviews/>
                 <Blog/>
                 <Footer/>
             </div>

@@ -6,7 +6,8 @@ const Blog = () => {
         <div className="blog">
              <Container className="p-3">
                  <center>
-                 <h2>BLOG AND<strong className="header-color"> &nbsp;NEWS</strong></h2>
+                 <h3>BLOG AND NEWS</h3>
+                 <div className='underline'></div>
                 </center>
                 <Row className="featured-games">
                 <Col sm="4" xs="12">

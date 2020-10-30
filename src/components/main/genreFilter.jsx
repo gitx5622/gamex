@@ -15,6 +15,10 @@ class GameFilter extends Component {
         this.setState({
             genres: genreData
         })
+        const {data:gameData} = await axios.get(`${API_ROUTE}/games`);
+        this.setState({
+            gameGenres: gameData.games
+        })
     }
 
       render(){
@@ -24,7 +28,7 @@ class GameFilter extends Component {
                  <center>
                 <h3>FILTER GAMES</h3>
                  <Button className="m-2" outline squared theme="info">
-                 <a href onClick={() => axios.get(`${API_ROUTE}/games?genre_id=0`).then(res => {this.setState({gameGenres: res.data.games})})}>ALL GAMES</a>
+                 <a href onClick={() => axios.get(`${API_ROUTE}/games`).then(res => {this.setState({gameGenres: res.data.games})})}>ALL GAMES</a>
                 </Button>
                 {genres.map(genre => {return (
                     <Button key={genre.id} className="m-2" outline squared theme="info">

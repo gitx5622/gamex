@@ -9,7 +9,6 @@ export const fetchGenres = () => {
         dispatch({type: BEFORE_STATE});
         try {
             const res = await axios.get(`${API_ROUTE}/genres`);
-            console.log(res);
             dispatch({type: FETCH_GENRES_SUCCESS, payload: res.data})
         }catch(err) {
             dispatch({type: FETCH_GENRES_ERROR, payload: err.error})

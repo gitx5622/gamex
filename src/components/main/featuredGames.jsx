@@ -8,7 +8,7 @@ class FeaturedGames extends Component {
             <div>
                 <Container className="p-3">
                  <center>
-                 <h2>FEATURED<strong className="header-color"> &nbsp;GAMES</strong></h2>
+                 <h2>FEATURED GAMES</h2>
                 </center>
                 <Row className="featured-games">
                 <Col>
