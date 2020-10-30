@@ -21,8 +21,7 @@ class GameFilter extends Component {
         this.setState({
             gameGenres: gameData.games
         })
-    }
-
+        }
       render(){
           const { genres, gameGenres, readMore} = this.state;
         return ( 
@@ -52,8 +51,8 @@ class GameFilter extends Component {
                         <Card className="card-image">
                         <CardImg top src={game.image_url} className="card-image"/>
                             <CardBody>
-                            <CardTitle>{game.title}</CardTitle>
-                            {game.genres.map(genre => <Col sm="12"><img className="genre-image" src={desktop} alt="" width="20px" height="20px"/> {genre.name}</Col>)}
+                            <CardTitle><Link to={`/game/${game.id}`}>{game.title}</Link></CardTitle>
+                            {game.genres.map(genre => <Col sm="12" key={genre.id}><img className="genre-image" src={desktop} alt="" width="20px" height="20px"/> {genre.name}</Col>)}
                             {readMore ? game.description : game.description.substring(0, 50)}
                             <Link onClick={()=> this.setState({readMore: !readMore})}>
                                 {readMore ? '...Show Less' : '...Read More'}
