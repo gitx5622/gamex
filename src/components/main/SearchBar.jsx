@@ -97,7 +97,7 @@ class SearchBar extends Component {
     if (!query) {
       this.setState({
         query,
-       games: [],
+        games: [],
         message: "There are no more search games. Please try a new search.",
       });
     } else {

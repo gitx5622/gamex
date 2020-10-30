@@ -139,3 +139,6 @@
   align-items: center;
   height: 200px;
 }
+.genre-image {
+  margin-left: -15px;
+}

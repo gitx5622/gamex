@@ -11,7 +11,8 @@ class AllGames extends Component {
     state = {
         games:[],
         activePage: 1,
-        loading: true
+        loading: true,
+        readMore: false
      }
      
     handlePageChange = (pageNumber) => {
@@ -28,6 +29,7 @@ class AllGames extends Component {
     }
 
     async componentDidMount() {
+        this.setState({loading: true})
         const {data:gamePagination} = await axios.get(`${API_ROUTE}/games?per=4&page=${this.state.activePage}`);
         this.setState({
             games: gamePagination.games,
@@ -35,10 +37,12 @@ class AllGames extends Component {
         })
     }
      render() { 
-        const { games, activePage, loading} = this.state;
+        const { games, activePage, loading, readMore} = this.state;
         if (loading === true) {
             return (
+                <main>
                 <Loading/>
+                </main>
             )
         }
          return ( 
@@ -49,10 +53,15 @@ class AllGames extends Component {
                  {games.map(game => { return (
                     <Col key={game.id} sm="12" md="4" lg="3">
                         <Card className="card-image">
-                        <CardImg top src={game.image_url}/>
+                        <CardImg top src={game.image_url} height="250px"/>
                             <CardBody>
                             <CardTitle><Link to={`/game/${game.id}`}>{game.title}</Link></CardTitle>
-                            {game.genres.map(genre => <Col key={genre.id}><img src={desktop} alt="" width="20px" height="20px"/> {genre.name}</Col>)}
+                            {game.genres.map(genre => 
+                            <Col key={genre.id}><img className="genre-image" src={desktop} alt="" width="20px" height="20px"/> {genre.name}</Col>)}
+                            {readMore ? game.description : game.description.substring(0, 50)}
+                            <Link onClick={()=> this.setState({readMore: !readMore})}>
+                                {readMore ? '...Show Less' : '...Read More'}
+                            </Link>
                             </CardBody>
                         </Card>
                         <br/>

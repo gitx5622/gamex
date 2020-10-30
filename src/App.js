@@ -16,8 +16,8 @@ class App extends Component {
             <Route path="/game/:id" component={GameDetails}/>
             <Route path="/login" component={LoginForm}/>
             <Route path="/register" component={RegisterForm}/>
-            <Route path="/" component={Home}/>
             <Route path="/notfound" component={NotFound} />
+            <Route exact path="/" component={Home}/>
             <Redirect to="/notfound" />
           </Switch>
         </div>
