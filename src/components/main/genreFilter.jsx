@@ -27,12 +27,17 @@ class GameFilter extends Component {
             <Container className="p-3">
                  <center>
                 <h3>FILTER GAMES</h3>
-                 <Button className="m-2" outline squared theme="info">
-                 <a href onClick={() => axios.get(`${API_ROUTE}/games`).then(res => {this.setState({gameGenres: res.data.games})})}>ALL GAMES</a>
+                 <Button 
+                 outline squared theme="info"
+                 onClick={() => axios.get(`${API_ROUTE}/games`).then(res => {this.setState({gameGenres: res.data.games})})}>
+                 ALL GAMES
                 </Button>
                 {genres.map(genre => {return (
-                    <Button key={genre.id} className="m-2" outline squared theme="info">
-                    <a href onClick={() => axios.get(`${API_ROUTE}/games?genre_id=${genre.id}`).then(res => {this.setState({gameGenres: res.data.games})})}>{genre.name}</a>
+                    <Button 
+                    key={genre.id} 
+                    outline squared theme="info"
+                    onClick={() => axios.get(`${API_ROUTE}/games?genre_id=${genre.id}`).then(res => {this.setState({gameGenres: res.data.games})})}>
+                    {genre.name}
                     </Button>
                 )}
                 )}
