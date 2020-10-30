@@ -5,12 +5,13 @@ import Pagination from "react-js-pagination";
 import axios from "axios";
 import API_ROUTE from '../../utils/constants';
 import desktop from "../../assets/desktop.png";
-
+import Loading from '../../common/loading';
 
 class AllGames extends Component {
     state = {
         games:[],
-        activePage: 1
+        activePage: 1,
+        loading: true
      }
      
     handlePageChange = (pageNumber) => {
@@ -29,11 +30,17 @@ class AllGames extends Component {
     async componentDidMount() {
         const {data:gamePagination} = await axios.get(`${API_ROUTE}/games?per=4&page=${this.state.activePage}`);
         this.setState({
-            games: gamePagination.games
+            games: gamePagination.games,
+            loading: false
         })
     }
      render() { 
-        const { games, activePage} = this.state;
+        const { games, activePage, loading} = this.state;
+        if (loading === true) {
+            return (
+                <Loading/>
+            )
+        }
          return ( 
              <div>
                  <Container className="p-3">
