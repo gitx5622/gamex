@@ -12,11 +12,6 @@ const NavBar = () => {
                 About
               </NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="#">
-                Disabled
-              </NavLink>
-            </NavItem>
             </Nav>
     </Navbar>
         </div>

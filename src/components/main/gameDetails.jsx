@@ -1,9 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Card, CardImg, CardBody, Button }  from 'shards-react';
 import { AiFillTags, AiOutlineFieldTime, AiFillSetting, BiWorld, CgScreen, FaUsers } from "react-icons/all";
+import Carousel from 'react-bootstrap/Carousel';
 import Footer from "./footer";
 import NavBar from './navbar';
 import pg18 from '../../assets/18.jpg';
+import poster from "../../assets/poster.jpg";
+import poster1 from "../../assets/poster1.jpg";
+import poster2 from "../../assets/poster2.jpg";
+import poster3 from "../../assets/poster3.jpg";
 
 const GameDetails = () => {
     return ( 
@@ -13,7 +18,20 @@ const GameDetails = () => {
             <Row className="game-details">
                 <Col sm={8} xs={12}>
                     <Card>
-                        <CardImg src="https://demo.gloriathemes.com/wp/cloux/wp-content/uploads/2017/12/nfs-3-970x570.jpg" height="400px"/>
+                        <Carousel>
+                            <Carousel.Item>
+                            <CardImg src={poster1} height="400px" width="730px"/>
+                            <Carousel.Caption/>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                            <CardImg src={poster2} height="400px" width="730px"/>
+                            <Carousel.Caption/>
+                            </Carousel.Item>
+                            <Carousel.Item>
+                            <CardImg src={poster3} height="400px" width="730px"/>
+                            <Carousel.Caption/>
+                            </Carousel.Item>
+                        </Carousel>
                     </Card>
                     <Card className="game-details">
                         <CardBody>
@@ -97,7 +115,7 @@ const GameDetails = () => {
                     <Card className="card2">
                     <CardBody>
                     <h5>GAME POSTER</h5>
-                    <CardImg />
+                    <CardImg src={poster} height="350px" width="300px"/>
                     </CardBody>
                     </Card>
                     <Card className="card3">
@@ -107,6 +125,27 @@ const GameDetails = () => {
                     <p>Violence, online play and strong language</p>
                     </Col>
                     </Row>
+                    </Card>
+                    <Card className="card4">
+                    <CardBody>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit phasellus condimentum.</p>
+                    <Row>
+                    <Col sm={6}>
+                    <Button 
+                        className="m-2"
+                        outline squared theme="info">
+                            REPORT
+                        </Button>
+                    </Col>
+                    <Col sm={6}>
+                    <Button 
+                        className="m-2"
+                        outline squared theme="info">
+                            CONTACT
+                        </Button>
+                    </Col>
+                    </Row>
+                    </CardBody>
                     </Card>
                 </Col>
             </Row>

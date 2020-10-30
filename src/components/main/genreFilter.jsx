@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import API_ROUTE from '../../utils/constants';
 import desktop from "../../assets/desktop.png";
+import {history} from "../../utils/history";
 
 class GameFilter extends Component { 
      state = {
@@ -49,7 +50,7 @@ class GameFilter extends Component {
                 {gameGenres.map(game => { return (
                     <Col key={game.id} sm="12" md="4" lg="3">
                         <Card className="card-image">
-                        <CardImg top src={game.image_url} className="card-image"/>
+                        <CardImg top src={game.image_url} onClick={history.push(`/game/${game.id}`)} className="card-image"/>
                             <CardBody>
                             <CardTitle><Link to={`/game/${game.id}`}>{game.title}</Link></CardTitle>
                             {game.genres.map(genre => <Col sm="12" key={genre.id}><img className="genre-image" src={desktop} alt="" width="20px" height="20px"/> {genre.name}</Col>)}
