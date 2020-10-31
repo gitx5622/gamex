@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import API_ROUTE from '../../utils/constants';
 import desktop from "../../assets/desktop.png";
-import {history} from "../../utils/history";
 
 class GameFilter extends Component { 
      state = {
