@@ -75,33 +75,6 @@ const GameDetails = (props) => {
                 </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src={game.imageurl2}
-                style={{minHeight:"320px"}}
-                alt="Third slide"
-                />
-                <Carousel.Caption>
-                <Row className="image-content">
-                    <Col sm={1}><img src={logo} alt="logo" width="80px" height="50px"/></Col>
-                    <Col sm={5}></Col>
-                    <Col sm={6}>
-                        <ul className="navbar">
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Blog</li>
-                            <li>Contact</li>
-                            { isAuthenticated ? SignedOutLinks: SignedInLinks }
-                            </ul>
-                    </Col>
-                    <Col sm={12}><h1>{game.title}</h1></Col>
-                </Row>
-                <h1 className="gameplay">GAMEPLAY</h1>
-                <p>{game.title} {game.description}
-                </p>
-                </Carousel.Caption>
-            </Carousel.Item>
         </Carousel>
             <Container>
             <Row className="game-details">
