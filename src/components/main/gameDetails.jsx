@@ -52,7 +52,7 @@ const GameDetails = (props) => {
                 <img
                 className="d-block w-100"
                 src={game.imageurl2}
-                style={{maxHeight:"350px"}}
+                style={{maxHeight:"400px"}}
                 alt="Third slide"
                 />
                 <Carousel.Caption>
@@ -71,9 +71,7 @@ const GameDetails = (props) => {
                      <Col sm={12}><h1>{game.title}</h1></Col>
                 </Row>
                 <h1 className="gameplay">GAMEPLAY</h1>
-                <p>{game.title} rewards you for your creativity and control all over the pitch
-                Create more scoring opportunities with all-new dynamic attacking systems 
-                in the most intelligent FIFA gameplay to date.
+                <p>{game.title} {game.description}
                 </p>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -81,7 +79,7 @@ const GameDetails = (props) => {
                 <img
                 className="d-block w-100"
                 src={game.imageurl2}
-                style={{maxHeight:"350px"}}
+                style={{maxHeight:"400px"}}
                 alt="Third slide"
                 />
                 <Carousel.Caption>
@@ -100,9 +98,7 @@ const GameDetails = (props) => {
                     <Col sm={12}><h1>{game.title}</h1></Col>
                 </Row>
                 <h1 className="gameplay">GAMEPLAY</h1>
-                <p>{game.title} is a racing video game developed by 
-                    Ghost Games and published by Electronic Arts for Microsoft 
-                    Windows, PlayStation 4 and Xbox One.
+                <p>{game.title} {game.description}
                 </p>
                 </Carousel.Caption>
             </Carousel.Item>
@@ -133,25 +129,8 @@ const GameDetails = (props) => {
                     <Card className="game-details">
                         <CardBody>
                             <h3>ABOUT {game.title}</h3>
-                        <p>Purus non enim praesent elementum facilisis. Neque vitae tempus quam
-                             pellentesque. Facilisis mauris sit amet massa vitae tortor condimentum
-                              lacinia. Rhoncus dolor purus non enim praesent elementum facilisis 
-                              leo. Quisque non tellus orci ac auctor augue mauris. Lobortis mattis
-                             aliquam faucibus purus. Cras pulvinar mattis nunc sed blandit libero 
-                             volutpat. Amet porttitor eget dolor morbi non arcu risus. Proin 
-                             sagittis nisl rhoncus mattis rhoncus urna neque viverra. Molestie at 
-                             elementum eu facilisis sed. In aliquam sem fringilla ut morbi. Ut 
-                             placerat orci nulla pellentesque dignissim enim sit amet venenatis. 
-                             Lacus sed turpis tincidunt id aliquet risus feugiat in diam sit.
-                            <br/><br/>
-                            Neque aliquam vestibulum morbi blandit cursus risus at ultrices. Nec tincidunt 
-                            praesent semper feugiat nibh sed pulvinar. Ornare aenean euismod elementum nisi quis eleifend 
-                            quam adipiscing vitae. At imperdiet dui accumsan sit amet nulla facilisi. Morbi tincidunt ornare 
-                            massa eget egestas purus viverra. Commodo viverra maecenas accumsan lacus vel. In fermentum posuere
-                            urna nec tincidunt. Malesuada fames ac turpis egestas sed tempus urna. Lorem sed risus ultricies
-                            tristique nulla aliquet enim tortor. Ultricies lacus sed turpis tincidunt id. Purus ut faucibus
-                            pulvinar elementum integer enim neque volutpat ac. Non pulvinar neque laoreet suspendisse. 
-                            Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis malesuada.
+                        <p>
+                            {game.about}
                         </p>
                         </CardBody>
                     </Card>
@@ -170,7 +149,7 @@ const GameDetails = (props) => {
                         </Button>
                         <h5>MINIMUM</h5>
                         <ul className="game-side-list">
-                        <li>GENRE : {game.categoty}</li>
+                        <li>GENRE : {game.category}</li>
                         <li>RELEASE DATE: {game.release_date}</li>
                         <li>DEVELOPER: GamevisionXtra Soft</li>
                         <li>PUBLISHER: EnvatoGloria Games</li>
