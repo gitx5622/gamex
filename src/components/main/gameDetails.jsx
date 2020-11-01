@@ -52,7 +52,7 @@ const GameDetails = (props) => {
                 <img
                 className="d-block w-100"
                 src={game.imageurl2}
-                style={{minHeight:"420px"}}
+                style={{minHeight:"320px"}}
                 alt="Third slide"
                 />
                 <Carousel.Caption>
@@ -79,7 +79,7 @@ const GameDetails = (props) => {
                 <img
                 className="d-block w-100"
                 src={game.imageurl2}
-                style={{minHeight:"420px"}}
+                style={{minHeight:"320px"}}
                 alt="Third slide"
                 />
                 <Carousel.Caption>
