@@ -38,12 +38,12 @@ const GameDetails = (props) => {
     
     const SignedInLinks = (
         <React.Fragment>
-        <li><Button size="sm" squared theme="info"><Link className="auth-link" to="/login">Login</Link></Button></li>
-        <li><Button size="sm" squared theme="info"><Link className="auth-link" to="/register">Signup</Link></Button></li>
+        <li><Link className="auth-link" to="/login"><Button size="sm" squared theme="info">Login</Button></Link></li>
+        <li><Link className="auth-link" to="/register"><Button size="sm" squared theme="info">Signup</Button></Link></li>
         </React.Fragment>
     );
     const SignedOutLinks = (
-        <li><Button size="sm" squared theme="info"><Link onClick={logout} to="/logout">LOGOUT</Link></Button></li>
+        <li><Link onClick={logout} to="/logout"><Button size="sm" squared theme="info">LOGOUT</Button></Link></li>
     );
     return ( 
         <div>
