@@ -1,5 +1,5 @@
 import React, { useEffect} from 'react';
-import { Container, Row, Col, Card, CardImg, CardBody, Button }  from 'shards-react';
+import { Container, Row, Col, Card, CardImg, CardBody, Button, Progress }  from 'shards-react';
 import { AiFillTags, AiOutlineFieldTime, AiFillSetting, BiWorld, CgScreen, FaUsers } from "react-icons/all";
 import { useSelector, useDispatch } from "react-redux";
 import {SignOut} from "../../store/auth/actions/authActions";
@@ -139,12 +139,33 @@ const GameDetails = (props) => {
                         <li>PLATFORMS: Steam Uplay</li>
                         <li>MODES: Co-opMulti Player</li>
                         </ul>
-                        <h5>ADDITIONAL NOTES:</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Phasellus condimentum pretium commodo. In hac habitasse
-                            platea dictumst. Donec ut nibh in metus accumsan tristique
-                            et non velit. Lorem ipsum dolor sit.
+                        <h5>AVERAGE RATINGS:</h5>
+                        <Row>
+                        <Col sm={8}>
+                        <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                         aliqua. Nisl nisi scelerisque eu ultrices vitae. Eu lobortis 
+                         elementum nibh tellus molestie. Tellus orci ac auctor augue
+                          mauris augue neque. Sem fringilla ut morbi tincidunt augue
+                           interdum. Sed risus ultricies tristique nulla aliquet enim. 
+                           Dui nunc mattis enim ut. Aliquet bibendum enim facilisis 
+                           gravida neque convallis a. In vitae turpis massa sed elementum 
+                           tempus egestas sed.
                         </p>
+                        </Col>
+                        <Col sm={4}>
+                        <h1>9.5</h1>
+                        </Col>
+                        </Row>
+                        <h6>Graphics</h6>
+                        <Progress value="95">95</Progress>
+                        <h6>Sound</h6>
+                        <Progress value="80">80</Progress>
+                        <h6>Gameplay</h6>
+                        <Progress value="98">98</Progress>
+                        <h6>Screenplay</h6>
+                        <Progress value="68">68</Progress>
                         </CardBody>
                     </Card>
                 </Col>

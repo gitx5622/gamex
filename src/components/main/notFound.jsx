@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import notfound from "../../assets/notfound.png"
 
 const NotFound = () => {
     return ( 
-        <h1>Not Found</h1>
+        <div>
+            <img src={notfound} className="not-found" alt="notfound"/>
+        </div>
      );
 }
  

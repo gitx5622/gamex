@@ -328,3 +328,6 @@ body {
   padding: 5px;
   border-radius: unset;
 }
+.not-found {
+  margin: 10%;
+}

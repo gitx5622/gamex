@@ -7,7 +7,6 @@ import Released from './released';
 import Reviews from './reviews';
 
 class Home extends Component {
-    state = {  }
     render() { 
         return ( 
             <div>
