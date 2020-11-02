@@ -110,7 +110,7 @@ class SearchBar extends Component {
   render() {
     const { query } = this.state;
     return (
-      <div className="col-md-8 offset-md-2" style={{marginBottom:"60px"}}>
+      <div className="col-md-8 offset-md-2 	d-none d-sm-block" style={{marginBottom:"60px"}}>
         <center><h1 className="game-search">Game Search</h1></center>
         <label className="search-label" htmlFor="search-input">
           <div className="input-group mb-3">
