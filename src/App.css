@@ -29,6 +29,7 @@ body {
 }
 .navbar li {
   display: inline;
+  text-decoration: none;
 }
 
 .auth-link {

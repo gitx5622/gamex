@@ -9,6 +9,7 @@ import Footer from "./footer";
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo.png';
 import pg18 from '../../assets/18.jpg';
+import { NavLink } from 'react-router-dom';
 
 
 const GameDetails = (props) => {
@@ -61,10 +62,10 @@ const GameDetails = (props) => {
                     <Col sm={5}></Col>
                     <Col sm={6}>
                         <ul className="navbar">
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Blog</li>
-                            <li>Contact</li>
+                            <li><NavLink to="/">Home</NavLink></li>
+                            <li><NavLink to="/about">About</NavLink></li>
+                            <li><NavLink to="/blog">Blog</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
                             { isAuthenticated ? SignedOutLinks: SignedInLinks }
                           </ul>
                     </Col>
