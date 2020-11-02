@@ -112,9 +112,9 @@ const Register = () => {
               <button
                   type="submit"
                   className="btn btn-solid"
-                  name="login"
+                  name="register"
                 >
-                  Login
+                  Register
                 </button>
                 </Col>
               <Col>
