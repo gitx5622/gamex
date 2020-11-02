@@ -5,6 +5,7 @@ import Home from "./components/main/home";
 import LoginForm from "./components/auth/loginForm";
 import RegisterForm from "./components/auth/registerForm";
 import GameDetails from "./components/main/gameDetails";
+import Blog from "./components/main/blog";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <div className="content" >
         <Switch>
           <Route path="/game/:id" component={GameDetails}/>
+          <Route path="/blog" component={Blog}/>
           <Route path="/login" component={LoginForm}/>
           <Route path="/register" component={RegisterForm}/>
           <Route path="/notfound" component={NotFound} />

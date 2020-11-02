@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Row, Col } from 'react-bootstrap';
 import { useSelector, useDispatch } from "react-redux";
 import {SignOut} from "../../store/auth/actions/authActions";
@@ -47,10 +47,10 @@ const HomeCarousel = () => {
                     <Col sm={5}></Col>
                     <Col sm={6}>
                         <ul className="navbar">
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Blog</li>
-                            <li>Contact</li>
+                            <li><NavLink to="/">Home</NavLink></li>
+                            <li><NavLink to="/about">About</NavLink></li>
+                            <li><NavLink to="/blog">Blog</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
                             { isAuthenticated ? SignedOutLinks: SignedInLinks }
                           </ul>
                     </Col>
@@ -79,10 +79,10 @@ const HomeCarousel = () => {
                     <Col sm={5}></Col>
                     <Col sm={6}>
                         <ul className="navbar">
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Blog</li>
-                            <li>Contact</li>
+                            <li><NavLink to="/">Home</NavLink></li>
+                            <li><NavLink to="/about">About</NavLink></li>
+                            <li><NavLink to="/blog">Blog</NavLink></li>
+                            <li><NavLink to="/contact">Contact</NavLink></li>
                             { isAuthenticated ? SignedOutLinks: SignedInLinks }
                             </ul>
                     </Col>
