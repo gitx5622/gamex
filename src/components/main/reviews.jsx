@@ -26,19 +26,19 @@ const Review = () => {
       return checkNumber(newIndex);
     });
   };
-  const randomPerson = () => {
-    let randomNumber = Math.floor(Math.random() * people.length);
-    if (randomNumber === index) {
-      randomNumber = index + 1;
-    }
-    setIndex(checkNumber(randomNumber));
-  };
+  // const randomPerson = () => {
+  //   let randomNumber = Math.floor(Math.random() * people.length);
+  //   if (randomNumber === index) {
+  //     randomNumber = index + 1;
+  //   }
+  //   setIndex(checkNumber(randomNumber));
+  // };
 
   return (
       <div>
     <h3><center>Reviews</center></h3>
     <div className='underline'></div>
-    <article className='review col-sm-6 offset-sm-3 mb-3'>
+    <article className='review col-sm-8 offset-sm-2 mb-3'>
       <div className='img-container'>
         <img src={image} alt={name} className='person-img' />
         <span className='quote-icon'>
@@ -56,9 +56,9 @@ const Review = () => {
           <FaChevronRight />
         </button>
       </div>
-      <button className='random-btn' onClick={randomPerson}>
+      {/* <button className='random-btn' onClick={randomPerson}>
         Choose at random
-      </button>
+      </button> */}
     </article>
     </div>
   );

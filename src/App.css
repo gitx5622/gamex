@@ -1,6 +1,12 @@
 body {
   background-color: #f1f5f8;
 }
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
 .gameplay {
   color: white;
   font-family: 'Titillium Web';
@@ -40,23 +46,29 @@ body {
 .searchbox h2 {
   color: white;
 }
+/*
+=============== 
+Footer
+===============
+*/
 .footer {
-  background-color: #111111;
+  background-color: #242a35;
+}
+#navigation li {
+  display: inline;
+}
+#navigation a {
   color: white;
 }
-.footer ul {
-  list-style: none;
+.articles a {
+  color: white;
 }
-
-.footer h3 {
-  color: mediumturquoise;
-}
-.bottom-footer {
-  background-color:#070707;
-}
-.bottom-footer li {
+.payments-methods li {
   display: inline;
-  padding: 5px;
+  margin-left: 50px;
+}
+.footer-color {
+  color: #a1a9b3;
 }
 
 .form-group input {
