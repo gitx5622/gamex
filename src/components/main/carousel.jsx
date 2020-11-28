@@ -8,6 +8,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import slider2 from '../../assets/slider2.jpg';
 import slider3 from '../../assets/slider3.jpg';
 import logo from '../../assets/logo.png';
+import desktop from "../../assets/desktop.png";
 
 const HomeCarousel = () => {
     const currentState = useSelector((state) => state);
@@ -40,7 +41,7 @@ const HomeCarousel = () => {
                 src={slider2}
                 alt="Third slide"
                 />
-                <Carousel.Caption style={{marginBottom:"100px"}}>
+                <Carousel.Caption style={{marginBottom:"50px"}}>
                 <Row className="image-content">
                     <Col sm={1}><img src={logo} alt="logo" width="80px"/></Col>
                     <Col sm={5}></Col>
@@ -53,7 +54,15 @@ const HomeCarousel = () => {
                             { isAuthenticated ? SignedOutLinks: SignedInLinks }
                           </ul>
                     </Col>
-                    <Col sm={12}><h1>FIFA 21</h1></Col>
+                    <Col sm={12}>
+                    <p>
+                    <img className="genre-image" src={desktop} alt="" width="20px" height="20px"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    PlayStation 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img className="genre-image" src={desktop} alt="" width="20px" height="20px"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    X BOX ONE
+                    </p>
+                        <h1>FIFA 21</h1>
+                        </Col>
                 </Row>
                 <h1 className="gameplay">GAMEPLAY</h1>
                 <p>FIFA 21 rewards you for your creativity and control all over the pitch
@@ -74,7 +83,7 @@ const HomeCarousel = () => {
                 alt="Third slide"
                 />
 
-                <Carousel.Caption style={{marginBottom:"100px"}}>
+                <Carousel.Caption style={{marginBottom:"50px"}}>
                 <Row className="image-content">
                     <Col sm={1}><img src={logo} alt="logo" width="80px"/></Col>
                     <Col sm={5}></Col>
@@ -87,7 +96,18 @@ const HomeCarousel = () => {
                             { isAuthenticated ? SignedOutLinks: SignedInLinks }
                             </ul>
                     </Col>
-                    <Col sm={12}><h1>NEED FOR SPEED</h1></Col>
+                    <Col sm={12}>
+                    <p>
+                    <img className="genre-image" src={desktop} alt="" width="20px" height="20px"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    PlayStation 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;<img className="genre-image" src={desktop} alt="" width="20px" height="20px"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    X BOX ONE 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;<img className="genre-image" src={desktop} alt="" width="20px" height="20px"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                    Steam
+                    </p>
+                        <h1>NEED FOR SPEED</h1>
+                        </Col>
                 </Row>
                 <h1 className="gameplay">GAMEPLAY</h1>
                 <p>Need for Speed Payback is a racing video game developed by 
