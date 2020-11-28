@@ -8,7 +8,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import slider2 from '../../assets/slider2.jpg';
 import slider3 from '../../assets/slider3.jpg';
 import logo from '../../assets/logo.png';
-import SearchBar from './SearchBar';
 
 const HomeCarousel = () => {
     const currentState = useSelector((state) => state);
@@ -41,9 +40,9 @@ const HomeCarousel = () => {
                 src={slider2}
                 alt="Third slide"
                 />
-                <Carousel.Caption>
+                <Carousel.Caption style={{marginBottom:"170px"}}>
                 <Row className="image-content">
-                    <Col sm={1}><img src={logo} alt="logo" width="80px" height="50px"/></Col>
+                    <Col sm={1}><img src={logo} alt="logo" width="80px"/></Col>
                     <Col sm={5}></Col>
                     <Col sm={6}>
                         <ul className="navbar">
@@ -61,9 +60,6 @@ const HomeCarousel = () => {
                 Create more scoring opportunities with all-new dynamic attacking systems 
                 in the most intelligent FIFA gameplay to date.
                 </p>
-                <Row>
-                <SearchBar/>
-                </Row>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -73,9 +69,9 @@ const HomeCarousel = () => {
                 alt="Third slide"
                 />
 
-                <Carousel.Caption>
+                <Carousel.Caption style={{marginBottom:"170px"}}>
                 <Row className="image-content">
-                    <Col sm={1}><img src={logo} alt="logo" width="80px" height="50px"/></Col>
+                    <Col sm={1}><img src={logo} alt="logo" width="80px"/></Col>
                     <Col sm={5}></Col>
                     <Col sm={6}>
                         <ul className="navbar">
@@ -93,9 +89,6 @@ const HomeCarousel = () => {
                     Ghost Games and published by Electronic Arts for Microsoft 
                     Windows, PlayStation 4 and Xbox One.
                 </p>
-                <Row>
-                <SearchBar/>
-                </Row>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
