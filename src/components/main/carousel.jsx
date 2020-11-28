@@ -40,7 +40,7 @@ const HomeCarousel = () => {
                 src={slider2}
                 alt="Third slide"
                 />
-                <Carousel.Caption style={{marginBottom:"170px"}}>
+                <Carousel.Caption style={{marginBottom:"100px"}}>
                 <Row className="image-content">
                     <Col sm={1}><img src={logo} alt="logo" width="80px"/></Col>
                     <Col sm={5}></Col>
@@ -59,7 +59,12 @@ const HomeCarousel = () => {
                 <p>FIFA 21 rewards you for your creativity and control all over the pitch
                 Create more scoring opportunities with all-new dynamic attacking systems 
                 in the most intelligent FIFA gameplay to date.
-                </p>
+                </p><br/><br/>
+                <Button outline theme="info">Game Details</Button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Button outline theme="info">Game Details</Button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -69,7 +74,7 @@ const HomeCarousel = () => {
                 alt="Third slide"
                 />
 
-                <Carousel.Caption style={{marginBottom:"170px"}}>
+                <Carousel.Caption style={{marginBottom:"100px"}}>
                 <Row className="image-content">
                     <Col sm={1}><img src={logo} alt="logo" width="80px"/></Col>
                     <Col sm={5}></Col>
@@ -88,7 +93,12 @@ const HomeCarousel = () => {
                 <p>Need for Speed Payback is a racing video game developed by 
                     Ghost Games and published by Electronic Arts for Microsoft 
                     Windows, PlayStation 4 and Xbox One.
-                </p>
+                </p><br/><br/>
+                <Button color="white" outline theme="info">Game Details</Button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <Button outline theme="info">Game Details</Button>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
