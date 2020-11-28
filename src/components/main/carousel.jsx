@@ -60,11 +60,11 @@ const HomeCarousel = () => {
                 Create more scoring opportunities with all-new dynamic attacking systems 
                 in the most intelligent FIFA gameplay to date.
                 </p><br/><br/>
-                <Button outline theme="info">Game Details</Button>
+                <Button outline theme="info" href="/game/2">Game Details</Button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Button outline theme="info">Game Details</Button>
+                <Button outline theme="info" href="/game/2">Game Details</Button>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -94,11 +94,11 @@ const HomeCarousel = () => {
                     Ghost Games and published by Electronic Arts for Microsoft 
                     Windows, PlayStation 4 and Xbox One.
                 </p><br/><br/>
-                <Button color="white" outline theme="info">Game Details</Button>
+                <Button outline theme="info" href="/game/1">Game Details</Button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Button outline theme="info">Game Details</Button>
+                <Button outline theme="info" href="/game/1">Game Details</Button>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
